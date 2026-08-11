@@ -193,6 +193,9 @@ export function ResumePdf() {
           <ContactItem href={`https://${contact.linkedin}`}>
             {contact.linkedin}
           </ContactItem>
+          <ContactItem href={`https://${contact.github}`}>
+            {contact.github}
+          </ContactItem>
         </View>
         <View style={styles.rule} />
 

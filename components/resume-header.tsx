@@ -27,6 +27,14 @@ export function ResumeHeader() {
             >
               {contact.linkedin}
             </a>
+            <a
+              href={`https://${contact.github}`}
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary hover:underline"
+            >
+              {contact.github}
+            </a>
           </div>
 
           <a

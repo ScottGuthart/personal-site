@@ -123,6 +123,7 @@ export const contact = {
   phone: "516 474 6714",
   email: "scott@guth.art",
   linkedin: "linkedin.com/in/scottguthart",
+  github: "github.com/ScottGuthart",
   summary:
     "Software engineer with full-stack, AI/LLMs, and data science experience, delivering solutions for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, Progressive, and L'Oréal.",
   skills: [
