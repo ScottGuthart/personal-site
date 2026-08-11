@@ -14,7 +14,7 @@ export const experience: Experience[] = [
     location: "New York, NY",
     bullets: [
       "Independently design, build, and ship AI-enabled internal applications in a fast-paced environment, streamlining workflows for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
-      "Created a media monitoring platform that automatically scrapes top-tier outlets like The New York Times and The Wall Street Journal, then classifies coverage with sentiment analysis and topic modeling to surface shifts in public opinion.",
+      "Created a media monitoring platform that automatically scrapes top-tier outlets like The New York Times and The Wall Street Journal, then uses LLMs with structured output to classify coverage and model topics, surfacing shifts in public opinion.",
       "Automated the generation of periodic reports for account teams, replacing manual media review and giving PR strategists faster, data-driven insight into their clients' media landscape.",
     ],
   },
@@ -121,8 +121,8 @@ export const contact = {
   summary:
     "Software engineer with full-stack, AI/LLMs, and data science experience, delivering solutions for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, Progressive, and L'Oréal.",
   skills: [
-    "Large Language Model Operations (LLMOps)",
-    "Local LLMs",
-    "Deterministic LLM Programming",
+    "AI Application Development",
+    "LLM Structured Output (Classification & Topic Modeling)",
+    "Automated Media Monitoring & Web Scraping",
   ],
 }
