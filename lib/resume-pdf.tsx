@@ -196,6 +196,9 @@ export function ResumePdf() {
           <ContactItem href={`https://${contact.github}`}>
             {contact.github}
           </ContactItem>
+          <ContactItem href={`https://${contact.calendly}`}>
+            {contact.calendly}
+          </ContactItem>
         </View>
         <View style={styles.rule} />
 

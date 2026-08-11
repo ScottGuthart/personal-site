@@ -123,6 +123,7 @@ export const contact = {
   email: "scott@guth.art",
   linkedin: "linkedin.com/in/scottguthart",
   github: "github.com/ScottGuthart",
+  calendly: "calendly.com/scott-guth/30min",
   summary:
     "Full-stack software engineer with a backend focus, independently architecting and self-hosting AI-driven applications end to end — from Postgres data models to production infrastructure — for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal.",
   skills: [
