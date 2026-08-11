@@ -19,21 +19,21 @@ export function CareerTimeline() {
           className="ms-9 pb-8 last:pb-0"
         >
           <TimelineHeader>
-            <TimelineSeparator className="bg-divider group-data-[orientation=vertical]/timeline:-left-[1.6rem] group-data-[orientation=vertical]/timeline:h-[calc(100%-1.5rem)] group-data-[orientation=vertical]/timeline:translate-y-6 group-data-completed/timeline-item:bg-primary" />
+            <TimelineSeparator className="bg-border group-data-[orientation=vertical]/timeline:-left-[1.6rem] group-data-[orientation=vertical]/timeline:h-[calc(100%-1.5rem)] group-data-[orientation=vertical]/timeline:translate-y-6 group-data-completed/timeline-item:bg-primary" />
 
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
-              <TimelineTitle className="text-lg font-extrabold leading-tight text-foreground">
+              <TimelineTitle className="text-lg font-bold leading-tight text-foreground">
                 {job.role}
-                <span className="font-normal text-accent-700"> — {job.company}</span>
+                <span className="font-normal text-primary"> — {job.company}</span>
               </TimelineTitle>
-              <time className="shrink-0 text-xs font-medium text-neutral-700">
+              <time className="shrink-0 text-xs font-medium text-muted-foreground">
                 {job.period}
                 {job.location ? ` · ${job.location}` : ""}
               </time>
             </div>
 
             <TimelineIndicator className="flex size-6 items-center justify-center border-none bg-muted group-data-[orientation=vertical]/timeline:-left-[1.6rem] group-data-completed/timeline-item:bg-primary">
-              <span className="size-2 rounded-full bg-neutral-700 group-data-completed/timeline-item:bg-primary-foreground" />
+              <span className="size-2 rounded-full bg-muted-foreground group-data-completed/timeline-item:bg-primary-foreground" />
             </TimelineIndicator>
           </TimelineHeader>
 

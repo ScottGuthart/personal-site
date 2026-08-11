@@ -8,7 +8,7 @@ export default function Home() {
       <ResumeHeader />
 
       <section className="mt-10">
-        <h2 className="mb-8 border-t-2 border-divider pt-3 text-[13px] font-extrabold uppercase tracking-[0.14em] text-foreground">
+        <h2 className="mb-8 border-t border-border pt-3 text-[13px] font-bold uppercase tracking-[0.14em] text-foreground">
           Experience
         </h2>
         <CareerTimeline />

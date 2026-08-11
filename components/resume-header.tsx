@@ -4,12 +4,12 @@ import { contact } from "@/lib/resume-data"
 export function ResumeHeader() {
   return (
     <header>
-      <div className="flex flex-col-reverse items-start gap-6 border-b-2 border-divider pb-5 sm:flex-row sm:justify-between">
+      <div className="flex flex-col-reverse items-start gap-6 border-b border-border pb-5 sm:flex-row sm:justify-between">
         <div>
-          <h1 className="text-4xl font-extrabold leading-none tracking-tight text-foreground sm:text-5xl">
+          <h1 className="text-4xl font-bold leading-none tracking-tight text-foreground sm:text-5xl">
             {contact.name}
           </h1>
-          <p className="mt-3 text-sm font-semibold text-accent-700">
+          <p className="mt-3 text-sm font-semibold text-primary">
             {contact.title}
           </p>
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-foreground">
@@ -29,14 +29,14 @@ export function ResumeHeader() {
           </div>
         </div>
 
-        <div className="h-40 w-32 shrink-0 overflow-hidden">
+        <div className="h-40 w-32 shrink-0 overflow-hidden rounded-lg border border-border">
           <Image
             src="/headshot.png"
             alt={`Portrait of ${contact.name}`}
             width={132}
             height={160}
             priority
-            className="grayscale-img h-full w-full object-cover object-[50%_30%]"
+            className="h-full w-full object-cover object-[50%_30%]"
           />
         </div>
       </div>
@@ -51,8 +51,8 @@ export function ResumeHeader() {
             key={skill}
             className={
               i === 0
-                ? "bg-accent px-2.5 py-1 text-[11px] font-medium text-accent-foreground"
-                : "border border-primary px-2.5 py-1 text-[11px] font-medium text-primary"
+                ? "rounded-full bg-primary px-2.5 py-1 text-[11px] font-medium text-primary-foreground"
+                : "rounded-full border border-border px-2.5 py-1 text-[11px] font-medium text-muted-foreground"
             }
           >
             {skill}

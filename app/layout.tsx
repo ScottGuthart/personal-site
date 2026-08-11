@@ -1,12 +1,11 @@
 import type { Metadata } from "next"
-import { Archivo } from "next/font/google"
+import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
+import { cn } from "@/lib/utils"
 
-const archivo = Archivo({
-  subsets: ["latin"],
-  weight: ["400", "600", "800"],
-  variable: "--font-archivo",
-})
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
+
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-heading" })
 
 export const metadata: Metadata = {
   title: "Scott Guthart — Software Engineer",
@@ -26,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${archivo.variable} bg-background`}>
+    <html lang="en" className={cn("bg-background font-sans", geist.variable, geistMono.variable)}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )

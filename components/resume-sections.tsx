@@ -2,7 +2,7 @@ import { earlierRoles, education, publications } from "@/lib/resume-data"
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-4 border-t-2 border-divider pt-3 text-[13px] font-extrabold uppercase tracking-[0.14em] text-foreground">
+    <h2 className="mb-4 border-t border-border pt-3 text-[13px] font-bold uppercase tracking-[0.14em] text-foreground">
       {children}
     </h2>
   )
@@ -21,7 +21,7 @@ export function EarlierRoles() {
             <dt className="text-sm leading-snug text-foreground">
               <strong className="font-bold">{role.role}</strong> — {role.detail}
             </dt>
-            <dd className="text-xs text-neutral-700 sm:text-right">{role.period}</dd>
+            <dd className="text-xs text-muted-foreground sm:text-right">{role.period}</dd>
           </div>
         ))}
       </dl>
@@ -38,7 +38,7 @@ export function Education() {
           <div key={edu.school} className="text-sm leading-snug">
             <div className="font-bold text-foreground">{edu.school}</div>
             <div className="text-foreground/90">{edu.degree}</div>
-            <div className="text-xs text-neutral-700">{edu.period}</div>
+            <div className="text-xs text-muted-foreground">{edu.period}</div>
           </div>
         ))}
       </div>
