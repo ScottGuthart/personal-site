@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { RiDownloadLine } from "@remixicon/react"
 import { contact } from "@/lib/resume-data"
 
 export function ResumeHeader() {
@@ -27,6 +28,15 @@ export function ResumeHeader() {
               {contact.linkedin}
             </a>
           </div>
+
+          <a
+            href="/resume.pdf"
+            download={`${contact.name.replace(/\s+/g, "-")}-Resume.pdf`}
+            className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            <RiDownloadLine className="size-3.5" aria-hidden />
+            Download PDF resume
+          </a>
         </div>
 
         <div className="h-40 w-32 shrink-0 overflow-hidden rounded-lg border border-border">
