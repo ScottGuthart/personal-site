@@ -11,6 +11,12 @@ export const experience: Experience[] = [
     role: "AI Full Stack Engineer",
     company: "Edelman",
     period: "April 2025 – Present",
+    location: "New York, NY",
+    bullets: [
+      "Independently design, build, and ship AI-enabled internal applications in a fast-paced environment, streamlining workflows for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
+      "Created a media monitoring platform that automatically scrapes top-tier outlets like The New York Times and The Wall Street Journal, then classifies coverage with sentiment analysis and topic modeling to surface shifts in public opinion.",
+      "Automated the generation of periodic reports for account teams, replacing manual media review and giving PR strategists faster, data-driven insight into their clients' media landscape.",
+    ],
   },
   {
     role: "Lead Software Engineer",
