@@ -1,6 +1,7 @@
 import { ResumeHeader } from "@/components/resume-header"
 import { CareerTimeline } from "@/components/career-timeline"
 import { EarlierRoles, Education, Publications } from "@/components/resume-sections"
+import { CosmosFrame } from "@/components/cosmos-frame"
 
 export default function Home() {
   return (
@@ -21,6 +22,10 @@ export default function Home() {
       <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
         <Education />
         <Publications />
+      </div>
+
+      <div className="mt-14 flex justify-center border-t border-border pt-10 sm:justify-end">
+        <CosmosFrame />
       </div>
     </main>
   )
