@@ -1,6 +1,7 @@
 export type Experience = {
   role: string
   company: string
+  companyUrl?: string
   period: string
   location?: string
   bullets?: string[]
@@ -10,6 +11,7 @@ export const experience: Experience[] = [
   {
     role: "AI Full Stack Engineer",
     company: "Edelman",
+    companyUrl: "https://www.edelman.com/expertise/ai",
     period: "April 2025 – Present",
     location: "New York, NY",
     bullets: [
@@ -21,6 +23,7 @@ export const experience: Experience[] = [
   {
     role: "Lead Software Engineer",
     company: "Radius",
+    companyUrl: "https://radiusinsights.com/services-solutions/data-science",
     period: "July 2022 – August 2024",
     location: "New York, NY",
     bullets: [
@@ -32,6 +35,7 @@ export const experience: Experience[] = [
   {
     role: "Full Stack Engineer",
     company: "Radius",
+    companyUrl: "https://radiusinsights.com/services-solutions/data-science",
     period: "November 2020 – July 2022",
     location: "New York, NY",
     bullets: [
@@ -42,6 +46,7 @@ export const experience: Experience[] = [
   {
     role: "Statistical Analyst",
     company: "Radius",
+    companyUrl: "https://radiusinsights.com/services-solutions/data-science",
     period: "June 2019 – November 2020",
     location: "Greater New York City Area",
     bullets: [
