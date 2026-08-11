@@ -27,18 +27,20 @@ const styles = StyleSheet.create({
   name: {
     fontFamily: "Helvetica-Bold",
     fontSize: 22,
+    lineHeight: 1,
     letterSpacing: -0.4,
+    marginBottom: 6,
   },
   title: {
     fontSize: 10,
     fontFamily: "Helvetica-Bold",
     color: "#333333",
-    marginTop: 3,
+    marginTop: 5,
   },
   contactRow: {
     flexDirection: "row",
     flexWrap: "wrap",
-    marginTop: 6,
+    marginTop: 9,
     fontSize: 8.5,
     color: "#333333",
   },
@@ -52,10 +54,10 @@ const styles = StyleSheet.create({
   rule: {
     borderBottomWidth: 1,
     borderBottomColor: "#1a1a1a",
-    marginTop: 10,
+    marginTop: 13,
   },
   summary: {
-    marginTop: 10,
+    marginTop: 13,
     fontSize: 9.5,
     color: "#1a1a1a",
   },
@@ -94,6 +96,11 @@ const styles = StyleSheet.create({
   jobCompany: {
     fontFamily: "Helvetica",
     color: "#333333",
+  },
+  jobCompanyLink: {
+    fontFamily: "Helvetica",
+    color: "#1a1a1a",
+    textDecoration: "underline",
   },
   jobMeta: {
     fontSize: 8.5,
@@ -186,6 +193,12 @@ export function ResumePdf() {
           <ContactItem href={`https://${contact.linkedin}`}>
             {contact.linkedin}
           </ContactItem>
+          <ContactItem href={`https://${contact.github}`}>
+            {contact.github}
+          </ContactItem>
+          <ContactItem href={`https://${contact.calendly}`}>
+            {contact.calendly}
+          </ContactItem>
         </View>
         <View style={styles.rule} />
 
@@ -203,7 +216,16 @@ export function ResumePdf() {
             <View style={styles.jobHeader}>
               <Text style={styles.jobRole}>
                 {job.role}
-                <Text style={styles.jobCompany}>{`  —  ${job.company}`}</Text>
+                {job.companyUrl ? (
+                  <Text style={styles.jobCompany}>
+                    {"  —  "}
+                    <Link src={job.companyUrl} style={styles.jobCompanyLink}>
+                      {job.company}
+                    </Link>
+                  </Text>
+                ) : (
+                  <Text style={styles.jobCompany}>{`  —  ${job.company}`}</Text>
+                )}
               </Text>
               <Text style={styles.jobMeta}>
                 {job.period}

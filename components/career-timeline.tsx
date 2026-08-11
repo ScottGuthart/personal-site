@@ -24,7 +24,21 @@ export function CareerTimeline() {
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <TimelineTitle className="text-lg font-bold leading-tight text-foreground">
                 {job.role}
-                <span className="font-normal text-primary"> — {job.company}</span>
+                {job.companyUrl ? (
+                  <>
+                    {" — "}
+                    <a
+                      href={job.companyUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-normal text-primary underline-offset-4 hover:underline"
+                    >
+                      {job.company}
+                    </a>
+                  </>
+                ) : (
+                  <span className="font-normal text-primary"> — {job.company}</span>
+                )}
               </TimelineTitle>
               <time className="shrink-0 text-xs font-medium text-muted-foreground">
                 {job.period}
