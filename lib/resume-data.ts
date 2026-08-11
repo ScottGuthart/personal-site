@@ -121,8 +121,8 @@ export const contact = {
   summary:
     "Software engineer with full-stack, AI/LLMs, and data science experience, delivering solutions for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, Progressive, and L'Oréal.",
   skills: [
-    "Large Language Model Operations (LLMOps)",
-    "Local LLMs",
-    "Deterministic LLM Programming",
+    "AI Application Development",
+    "NLP (Sentiment Analysis & Topic Modeling)",
+    "Automated Media Monitoring & Web Scraping",
   ],
 }
