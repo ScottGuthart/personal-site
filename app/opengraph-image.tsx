@@ -88,19 +88,19 @@ export default async function OpengraphImage() {
           style={{
             display: "flex",
             alignItems: "center",
-            paddingRight: 64,
+            paddingRight: 72,
           }}
         >
           <img
             src={headshotSrc}
-            width={360}
-            height={450}
+            width={220}
+            height={275}
             style={{
-              width: 360,
-              height: 450,
+              width: 220,
+              height: 275,
               objectFit: "cover",
-              borderRadius: 24,
-              border: "6px solid #f97316",
+              borderRadius: 20,
+              border: "4px solid #f97316",
             }}
           />
         </div>
