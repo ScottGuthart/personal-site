@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Modernist theme — mapped to shadcn tokens */
+  --background: #f3f2f2;
+  --foreground: #201e1d;
+
+  --card: #eae9e9;
+  --card-foreground: #201e1d;
+
+  --popover: #eae9e9;
+  --popover-foreground: #201e1d;
+
+  --primary: #ec3013;
+  --primary-foreground: #f3f2f2;
+
+  --secondary: #eae9e9;
+  --secondary-foreground: #201e1d;
+
+  --muted: #eae9e9;
+  --muted-foreground: #605d5d;
+
+  --accent: #ffe0d9;
+  --accent-foreground: #7c1405;
+
+  --destructive: #ec3013;
+  --destructive-foreground: #f3f2f2;
+
+  --border: #d7d3d3;
+  --input: #d7d3d3;
+  --ring: #ec3013;
+
+  /* Direct modernist tokens for bespoke resume styling */
+  --divider: color-mix(in srgb, #201e1d 40%, transparent);
+  --accent-700: #ae1800;
+  --neutral-700: #605d5d;
+
+  --radius: 0px;
+
+  --success: var(--color-emerald-500);
+
+  --success-foreground: var(--color-emerald-900);
+
+  --info: var(--color-violet-500);
+
+  --info-foreground: var(--color-violet-900);
+
+  --warning: var(--color-yellow-500);
+
+  --warning-foreground: var(--color-yellow-900);
+
+  --invert: var(--color-zinc-900);
+
+  --invert-foreground: var(--color-zinc-50);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-divider: var(--divider);
+  --color-accent-700: var(--accent-700);
+  --color-neutral-700: var(--neutral-700);
+
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-heading: var(--font-archivo), system-ui, sans-serif;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --color-invert-foreground: var(--invert-foreground);
+  --color-invert: var(--invert);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning: var(--warning);
+  --color-info-foreground: var(--info-foreground);
+  --color-info: var(--info);
+  --color-success-foreground: var(--success-foreground);
+  --color-success: var(--success);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+}
+
+.grayscale-img {
+  filter: grayscale(1) contrast(1.08);
+}
+
+.dark {
+  --destructive-foreground: var(--color-red-600);
+  --success: var(--color-emerald-500);
+  --success-foreground: var(--color-emerald-600);
+  --info: var(--color-violet-500);
+  --info-foreground: var(--color-violet-600);
+  --warning: var(--color-yellow-500);
+  --warning-foreground: var(--color-yellow-600);
+  --invert: var(--color-zinc-700);
+  --invert-foreground: var(--color-zinc-50);
+}
