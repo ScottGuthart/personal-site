@@ -5,6 +5,7 @@ import {
   View,
   StyleSheet,
   Link,
+  Image,
 } from "@react-pdf/renderer"
 import {
   contact,
@@ -23,6 +24,29 @@ const styles = StyleSheet.create({
     fontSize: 9.5,
     lineHeight: 1.4,
     color: "#1a1a1a",
+  },
+  headerRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+  },
+  headerLeft: {
+    flex: 1,
+    paddingRight: 16,
+  },
+  qrBlock: {
+    alignItems: "center",
+    width: 74,
+  },
+  qr: {
+    width: 66,
+    height: 66,
+  },
+  qrCaption: {
+    marginTop: 3,
+    fontSize: 6.5,
+    color: "#555555",
+    textAlign: "center",
   },
   name: {
     fontFamily: "Helvetica-Bold",
@@ -173,7 +197,7 @@ function ContactItem({
   return <Text style={styles.contactItem}>{children}</Text>
 }
 
-export function ResumePdf() {
+export function ResumePdf({ qrCodeDataUrl }: { qrCodeDataUrl?: string } = {}) {
   return (
     <Document
       title={`${contact.name} — Resume`}
@@ -182,23 +206,33 @@ export function ResumePdf() {
     >
       <Page size="A4" style={styles.page}>
         {/* Header */}
-        <Text style={styles.name}>{contact.name}</Text>
-        <Text style={styles.title}>{contact.title}</Text>
-        <View style={styles.contactRow}>
-          <ContactItem>{contact.location}</ContactItem>
-          <ContactItem>{contact.phone}</ContactItem>
-          <ContactItem href={`mailto:${contact.email}`}>
-            {contact.email}
-          </ContactItem>
-          <ContactItem href={`https://${contact.linkedin}`}>
-            {contact.linkedin}
-          </ContactItem>
-          <ContactItem href={`https://${contact.github}`}>
-            {contact.github}
-          </ContactItem>
-          <ContactItem href={`https://${contact.scheduler}`}>
-            {contact.scheduler}
-          </ContactItem>
+        <View style={styles.headerRow}>
+          <View style={styles.headerLeft}>
+            <Text style={styles.name}>{contact.name}</Text>
+            <Text style={styles.title}>{contact.title}</Text>
+            <View style={styles.contactRow}>
+              <ContactItem>{contact.location}</ContactItem>
+              <ContactItem>{contact.phone}</ContactItem>
+              <ContactItem href={`mailto:${contact.email}`}>
+                {contact.email}
+              </ContactItem>
+              <ContactItem href={`https://${contact.linkedin}`}>
+                {contact.linkedin}
+              </ContactItem>
+              <ContactItem href={`https://${contact.github}`}>
+                {contact.github}
+              </ContactItem>
+              <ContactItem href={`https://${contact.scheduler}`}>
+                {contact.scheduler}
+              </ContactItem>
+            </View>
+          </View>
+          {qrCodeDataUrl ? (
+            <View style={styles.qrBlock}>
+              <Image src={qrCodeDataUrl} style={styles.qr} />
+              <Text style={styles.qrCaption}>Scan to visit my site</Text>
+            </View>
+          ) : null}
         </View>
         <View style={styles.rule} />
 
