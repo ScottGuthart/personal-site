@@ -145,13 +145,11 @@ const styles = StyleSheet.create({
     fontSize: 9,
     color: "#262626",
   },
-  twoCol: {
-    flexDirection: "row",
-    gap: 16,
-  },
-  col: {
-    width: "48%",
-    minWidth: 0,
+  educationSchool: {
+    fontFamily: "Helvetica-Bold",
+    fontSize: 9,
+    lineHeight: 1.3,
+    marginBottom: 2,
   },
   compactItem: {
     marginBottom: 9,
@@ -166,20 +164,20 @@ const styles = StyleSheet.create({
   compactRole: {
     fontFamily: "Helvetica-Bold",
     fontSize: 9,
-    lineHeight: 11,
+    lineHeight: 1.3,
     flex: 1,
     minWidth: 0,
     paddingRight: 6,
   },
   compactDetail: {
     fontSize: 8.5,
-    lineHeight: 10.5,
+    lineHeight: 1.3,
     color: "#444444",
     minWidth: 0,
   },
   compactPeriod: {
     fontSize: 8,
-    lineHeight: 9.5,
+    lineHeight: 1.3,
     color: "#666666",
   },
   pubRow: {
@@ -297,26 +295,21 @@ export function ResumePdf({ qrCodeDataUrl }: { qrCodeDataUrl?: string } = {}) {
         ))}
 
         {/* Education + Publications */}
-        <Text style={styles.sectionTitle}>Education & Publications</Text>
-        <View style={styles.twoCol}>
-          <View style={styles.col}>
-            {education.map((edu) => (
-              <View key={edu.school} style={styles.compactItem} wrap={false}>
-                <Text style={styles.compactRole}>{edu.school}</Text>
-                <Text style={styles.compactDetail}>{edu.degree}</Text>
-                <Text style={styles.compactPeriod}>{edu.period}</Text>
-              </View>
-            ))}
+        <Text style={styles.sectionTitle} minPresenceAhead={50}>Education</Text>
+        {education.map((edu) => (
+          <View key={edu.school} style={styles.compactItem} wrap={false}>
+            <Text style={styles.educationSchool}>{edu.school}</Text>
+            <Text style={styles.compactDetail}>{edu.degree}</Text>
+            <Text style={styles.compactPeriod}>{edu.period}</Text>
           </View>
-          <View style={styles.col}>
-            {publications.map((pub, i) => (
-              <View key={i} style={styles.pubRow}>
-                <Text style={styles.bulletDot}>•</Text>
-                <Text style={styles.compactDetail}>{pub}</Text>
-              </View>
-            ))}
+        ))}
+        <Text style={styles.sectionTitle} minPresenceAhead={30}>Publications</Text>
+        {publications.map((pub, i) => (
+          <View key={i} style={styles.pubRow} wrap={false}>
+            <Text style={styles.bulletDot}>•</Text>
+            <Text style={[styles.compactDetail, { flex: 1 }]}>{pub}</Text>
           </View>
-        </View>
+        ))}
       </Page>
     </Document>
   )
