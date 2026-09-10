@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     minWidth: 0,
   },
   compactItem: {
-    marginBottom: 5,
+    marginBottom: 9,
     minWidth: 0,
   },
   compactHeader: {
@@ -166,25 +166,26 @@ const styles = StyleSheet.create({
   compactRole: {
     fontFamily: "Helvetica-Bold",
     fontSize: 9,
-    lineHeight: 1.2,
+    lineHeight: 11,
     flex: 1,
     minWidth: 0,
     paddingRight: 6,
   },
   compactDetail: {
     fontSize: 8.5,
-    lineHeight: 1.25,
+    lineHeight: 10.5,
     color: "#444444",
     minWidth: 0,
   },
   compactPeriod: {
     fontSize: 8,
-    lineHeight: 1.2,
+    lineHeight: 9.5,
     color: "#666666",
   },
   pubRow: {
     flexDirection: "row",
     marginTop: 2.5,
+    minWidth: 0,
   },
 })
 
