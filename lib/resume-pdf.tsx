@@ -147,31 +147,39 @@ const styles = StyleSheet.create({
   },
   twoCol: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    gap: 16,
   },
   col: {
     width: "48%",
+    minWidth: 0,
   },
   compactItem: {
     marginBottom: 5,
+    minWidth: 0,
   },
   compactHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "baseline",
+    minWidth: 0,
   },
   compactRole: {
     fontFamily: "Helvetica-Bold",
     fontSize: 9,
+    lineHeight: 1.2,
     flex: 1,
+    minWidth: 0,
     paddingRight: 6,
   },
   compactDetail: {
     fontSize: 8.5,
+    lineHeight: 1.25,
     color: "#444444",
+    minWidth: 0,
   },
   compactPeriod: {
     fontSize: 8,
+    lineHeight: 1.2,
     color: "#666666",
   },
   pubRow: {
