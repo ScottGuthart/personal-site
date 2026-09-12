@@ -33,9 +33,6 @@ export default function Home() {
         <div className="flex justify-center sm:justify-end">
           <CosmosFrame />
         </div>
-        <p className="mt-6 text-sm leading-6 text-muted-foreground">
-          Built with an AI-native workflow using v0, Claude Code, and Vercel.
-        </p>
       </footer>
     </main>
   )

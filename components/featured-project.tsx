@@ -46,6 +46,9 @@ export function FeaturedProject() {
         <span className="rounded-full bg-muted px-2.5 py-1">Supabase / PostgreSQL</span>
         <span className="rounded-full bg-muted px-2.5 py-1">Next.js + React</span>
       </div>
+      <p className="mt-4 text-sm leading-6 text-muted-foreground">
+        MovieTable was built with an AI-native workflow using v0, Claude Code, and Vercel.
+      </p>
     </section>
   )
 }
