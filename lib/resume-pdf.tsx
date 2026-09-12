@@ -127,6 +127,11 @@ const styles = StyleSheet.create({
     fontSize: 9,
     color: "#262626",
   },
+  projectStack: {
+    marginTop: 2,
+    fontSize: 7.5,
+    color: "#555555",
+  },
   job: {
     marginBottom: 9,
   },
@@ -321,6 +326,9 @@ export function ResumePdf({ qrCodeDataUrl }: { qrCodeDataUrl?: string } = {}) {
           </View>
           <Text style={styles.projectDescription}>
             {featuredProject.description}
+          </Text>
+          <Text style={styles.projectStack}>
+            Stack: {featuredProject.stack}
           </Text>
         </View>
 

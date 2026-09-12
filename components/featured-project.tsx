@@ -15,6 +15,9 @@ export function FeaturedProject() {
           <p className="mt-2 text-sm leading-6 text-muted-foreground">
             {featuredProject.description} It is available to explore publicly and includes a recommendation system designed to showcase the full-stack and AI work behind it.
           </p>
+          <p className="mt-3 text-xs leading-5 text-muted-foreground">
+            <span className="font-medium text-foreground">Stack:</span> {featuredProject.stack}
+          </p>
         </div>
         <div className="flex shrink-0 flex-wrap gap-2">
           <a
@@ -40,7 +43,8 @@ export function FeaturedProject() {
       <div className="mt-5 flex flex-wrap gap-2 border-t border-border pt-4 text-[11px] font-medium text-muted-foreground">
         <span className="rounded-full bg-muted px-2.5 py-1">AI recommendations</span>
         <span className="rounded-full bg-muted px-2.5 py-1">Critic + user ratings</span>
-        <span className="rounded-full bg-muted px-2.5 py-1">Full-stack product</span>
+        <span className="rounded-full bg-muted px-2.5 py-1">Supabase / PostgreSQL</span>
+        <span className="rounded-full bg-muted px-2.5 py-1">Next.js + React</span>
       </div>
     </section>
   )

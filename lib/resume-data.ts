@@ -114,6 +114,8 @@ export const featuredProject = {
   sourceUrl: "https://github.com/ScottGuthart/movietable",
   description:
     "Public full-stack movie discovery app combining critic and user ratings with AI-powered recommendations and weighted scoring.",
+  stack:
+    "Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, ReUI, TanStack Table, Supabase/PostgreSQL",
 }
 
 export const publications: string[] = [
