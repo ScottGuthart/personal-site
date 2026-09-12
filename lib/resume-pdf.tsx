@@ -9,9 +9,10 @@ import {
 } from "@react-pdf/renderer"
 import {
   contact,
-  experience,
   earlierRoles,
   education,
+  experience,
+  featuredProject,
   publications,
 } from "@/lib/resume-data"
 
@@ -104,6 +105,27 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: "#cccccc",
     paddingTop: 6,
+  },
+  project: {
+    marginBottom: 9,
+  },
+  projectHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+  },
+  projectName: {
+    fontFamily: "Helvetica-Bold",
+    fontSize: 10,
+  },
+  projectLinks: {
+    fontSize: 8,
+    color: "#333333",
+  },
+  projectDescription: {
+    marginTop: 2.5,
+    fontSize: 9,
+    color: "#262626",
   },
   job: {
     marginBottom: 9,
@@ -281,6 +303,26 @@ export function ResumePdf({ qrCodeDataUrl }: { qrCodeDataUrl?: string } = {}) {
             ))}
           </View>
         ))}
+
+        {/* Selected project */}
+        <Text style={styles.sectionTitle}>Selected Project</Text>
+        <View style={styles.project} wrap={false}>
+          <View style={styles.projectHeader}>
+            <Text style={styles.projectName}>{featuredProject.name}</Text>
+            <Text style={styles.projectLinks}>
+              <Link src={featuredProject.appUrl} style={styles.link}>
+                movietable.ai
+              </Link>
+              {"  ·  "}
+              <Link src={featuredProject.sourceUrl} style={styles.link}>
+                GitHub source
+              </Link>
+            </Text>
+          </View>
+          <Text style={styles.projectDescription}>
+            {featuredProject.description}
+          </Text>
+        </View>
 
         {/* Earlier roles */}
         <Text style={styles.sectionTitle}>Earlier Experience</Text>

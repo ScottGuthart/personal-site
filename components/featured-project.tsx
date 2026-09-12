@@ -1,4 +1,5 @@
 import { RiArrowRightUpLine, RiGithubLine } from "@remixicon/react"
+import { featuredProject } from "@/lib/resume-data"
 
 export function FeaturedProject() {
   return (
@@ -9,15 +10,15 @@ export function FeaturedProject() {
             Selected project
           </p>
           <h2 id="featured-project-title" className="text-2xl font-bold tracking-tight text-foreground">
-            MovieTable
+            {featuredProject.name}
           </h2>
           <p className="mt-2 text-sm leading-6 text-muted-foreground">
-            A public full-stack application for exploring movies through critic and audience ratings, with AI-powered recommendations and a weighted scoring experience that helps users find their next great film.
+            {featuredProject.description} It is available to explore publicly and includes a recommendation system designed to showcase the full-stack and AI work behind it.
           </p>
         </div>
         <div className="flex shrink-0 flex-wrap gap-2">
           <a
-            href="https://movietable.ai"
+            href={featuredProject.appUrl}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-2 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90"
@@ -26,7 +27,7 @@ export function FeaturedProject() {
             <RiArrowRightUpLine aria-hidden className="size-3.5" />
           </a>
           <a
-            href="https://github.com/ScottGuthart/movietable"
+            href={featuredProject.sourceUrl}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-2 text-xs font-medium text-foreground transition-colors hover:bg-muted"
