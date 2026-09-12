@@ -29,9 +29,14 @@ export default function Home() {
         <Publications />
       </div>
 
-      <div className="mt-14 flex justify-center border-t border-border pt-10 sm:justify-end">
-        <CosmosFrame />
-      </div>
+      <footer className="mt-14 border-t border-border pt-10">
+        <div className="flex justify-center sm:justify-end">
+          <CosmosFrame />
+        </div>
+        <p className="mt-6 text-sm leading-6 text-muted-foreground">
+          Built with an AI-native workflow using v0, Claude Code, and Vercel.
+        </p>
+      </footer>
     </main>
   )
 }
