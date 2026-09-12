@@ -9,9 +9,10 @@ import {
 } from "@react-pdf/renderer"
 import {
   contact,
-  experience,
   earlierRoles,
   education,
+  experience,
+  featuredProject,
   publications,
 } from "@/lib/resume-data"
 
@@ -105,6 +106,32 @@ const styles = StyleSheet.create({
     borderTopColor: "#cccccc",
     paddingTop: 6,
   },
+  project: {
+    marginBottom: 9,
+  },
+  projectHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "baseline",
+  },
+  projectName: {
+    fontFamily: "Helvetica-Bold",
+    fontSize: 10,
+  },
+  projectLinks: {
+    fontSize: 8,
+    color: "#333333",
+  },
+  projectDescription: {
+    marginTop: 2.5,
+    fontSize: 9,
+    color: "#262626",
+  },
+  projectStack: {
+    marginTop: 2,
+    fontSize: 7.5,
+    color: "#555555",
+  },
   job: {
     marginBottom: 9,
   },
@@ -145,38 +172,45 @@ const styles = StyleSheet.create({
     fontSize: 9,
     color: "#262626",
   },
-  twoCol: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  col: {
-    width: "48%",
+  educationSchool: {
+    fontFamily: "Helvetica-Bold",
+    fontSize: 9,
+    lineHeight: 1.3,
+    marginBottom: 2,
   },
   compactItem: {
-    marginBottom: 5,
+    marginBottom: 9,
+    minWidth: 0,
   },
   compactHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "baseline",
+    minWidth: 0,
   },
   compactRole: {
     fontFamily: "Helvetica-Bold",
     fontSize: 9,
+    lineHeight: 1.3,
     flex: 1,
+    minWidth: 0,
     paddingRight: 6,
   },
   compactDetail: {
     fontSize: 8.5,
+    lineHeight: 1.3,
     color: "#444444",
+    minWidth: 0,
   },
   compactPeriod: {
     fontSize: 8,
+    lineHeight: 1.3,
     color: "#666666",
   },
   pubRow: {
     flexDirection: "row",
     marginTop: 2.5,
+    minWidth: 0,
   },
 })
 
@@ -275,6 +309,29 @@ export function ResumePdf({ qrCodeDataUrl }: { qrCodeDataUrl?: string } = {}) {
           </View>
         ))}
 
+        {/* Selected project */}
+        <Text style={styles.sectionTitle}>Selected Project</Text>
+        <View style={styles.project} wrap={false}>
+          <View style={styles.projectHeader}>
+            <Text style={styles.projectName}>{featuredProject.name}</Text>
+            <Text style={styles.projectLinks}>
+              <Link src={featuredProject.appUrl} style={styles.link}>
+                movietable.ai
+              </Link>
+              {"  ·  "}
+              <Link src={featuredProject.sourceUrl} style={styles.link}>
+                GitHub source
+              </Link>
+            </Text>
+          </View>
+          <Text style={styles.projectDescription}>
+            {featuredProject.description}
+          </Text>
+          <Text style={styles.projectStack}>
+            Stack: {featuredProject.stack}
+          </Text>
+        </View>
+
         {/* Earlier roles */}
         <Text style={styles.sectionTitle}>Earlier Experience</Text>
         {earlierRoles.map((role) => (
@@ -288,26 +345,21 @@ export function ResumePdf({ qrCodeDataUrl }: { qrCodeDataUrl?: string } = {}) {
         ))}
 
         {/* Education + Publications */}
-        <Text style={styles.sectionTitle}>Education & Publications</Text>
-        <View style={styles.twoCol}>
-          <View style={styles.col}>
-            {education.map((edu) => (
-              <View key={edu.school} style={styles.compactItem} wrap={false}>
-                <Text style={styles.compactRole}>{edu.school}</Text>
-                <Text style={styles.compactDetail}>{edu.degree}</Text>
-                <Text style={styles.compactPeriod}>{edu.period}</Text>
-              </View>
-            ))}
+        <Text style={styles.sectionTitle} minPresenceAhead={50}>Education</Text>
+        {education.map((edu) => (
+          <View key={edu.school} style={styles.compactItem} wrap={false}>
+            <Text style={styles.educationSchool}>{edu.school}</Text>
+            <Text style={styles.compactDetail}>{edu.degree}</Text>
+            <Text style={styles.compactPeriod}>{edu.period}</Text>
           </View>
-          <View style={styles.col}>
-            {publications.map((pub, i) => (
-              <View key={i} style={styles.pubRow}>
-                <Text style={styles.bulletDot}>•</Text>
-                <Text style={styles.compactDetail}>{pub}</Text>
-              </View>
-            ))}
+        ))}
+        <Text style={styles.sectionTitle} minPresenceAhead={30}>Publications</Text>
+        {publications.map((pub, i) => (
+          <View key={i} style={styles.pubRow} wrap={false}>
+            <Text style={styles.bulletDot}>•</Text>
+            <Text style={[styles.compactDetail, { flex: 1 }]}>{pub}</Text>
           </View>
-        </View>
+        ))}
       </Page>
     </Document>
   )

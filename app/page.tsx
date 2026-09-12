@@ -2,6 +2,7 @@ import { ResumeHeader } from "@/components/resume-header"
 import { CareerTimeline } from "@/components/career-timeline"
 import { EarlierRoles, Education, Publications } from "@/components/resume-sections"
 import { CosmosFrame } from "@/components/cosmos-frame"
+import { FeaturedProject } from "@/components/featured-project"
 
 export default function Home() {
   return (
@@ -14,6 +15,10 @@ export default function Home() {
         </h2>
         <CareerTimeline />
       </section>
+
+      <div className="mt-12">
+        <FeaturedProject />
+      </div>
 
       <div className="mt-10">
         <EarlierRoles />

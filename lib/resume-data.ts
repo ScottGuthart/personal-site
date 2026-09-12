@@ -108,6 +108,16 @@ export const education: Education[] = [
   },
 ]
 
+export const featuredProject = {
+  name: "MovieTable",
+  appUrl: "https://movietable.ai",
+  sourceUrl: "https://github.com/ScottGuthart/movietable",
+  description:
+    "Public full-stack movie discovery app combining critic and user ratings with AI-powered recommendations and weighted scoring.",
+  stack:
+    "Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, ReUI, TanStack Table, Supabase/PostgreSQL; self-hosted on a DigitalOcean Ubuntu VM with Coolify (PaaS) and Cloudflare DNS",
+}
+
 export const publications: string[] = [
   "Augmented mindfulness intervention for overweight / obese children and adolescents",
   "Clustering of Clusters in Ensemble Segmentation: Which Technique Works Best?",
