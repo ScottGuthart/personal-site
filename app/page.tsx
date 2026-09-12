@@ -29,9 +29,11 @@ export default function Home() {
         <Publications />
       </div>
 
-      <div className="mt-14 flex justify-center border-t border-border pt-10 sm:justify-end">
-        <CosmosFrame />
-      </div>
+      <footer className="mt-14 border-t border-border pt-10">
+        <div className="flex justify-center sm:justify-end">
+          <CosmosFrame />
+        </div>
+      </footer>
     </main>
   )
 }
