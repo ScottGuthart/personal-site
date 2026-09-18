@@ -16,7 +16,8 @@ export const experience: Experience[] = [
     location: "New York, NY",
     bullets: [
       "Independently architect, build, and support production AI applications end to end as the sole engineer — Python/FastAPI REST services and a Supabase (PostgreSQL) backend behind a React, Next.js, Tailwind, and shadcn frontend, containerized with Docker and deployed across Azure and AWS EC2 — for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
-      "Built an automated media-monitoring pipeline in Python (FastAPI, pandas) that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses Azure OpenAI, OpenAI, and Anthropic (Claude) models with structured output to classify coverage and model topics, with human-in-the-loop review so strategists can validate and refine results.",
+      "Built an automated media-monitoring pipeline in Next.js and Python (pandas) that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses Azure OpenAI, OpenAI, and Anthropic (Claude) models with structured output to classify coverage and model topics, with human-in-the-loop review so strategists can validate and refine results.",
+      "Built a canvas-style AI press-release editor on a Python/FastAPI REST backend, letting communications teams draft, restructure, and refine releases collaboratively with LLM assistance.",
       "Design multi-step LLM agent workflows with LangChain and LangGraph on Azure OpenAI, and run large-scale data processing and analysis in Databricks to power client insights.",
       "Own deliverables from requirements through release: partner directly with strategists and client teams to gather feedback, communicate trade-offs, and iterate quickly, developing AI-natively with tools like Cursor and Claude to ship and refine features rapidly.",
     ],
