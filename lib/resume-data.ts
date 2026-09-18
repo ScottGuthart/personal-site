@@ -127,7 +127,7 @@ export const publications: string[] = [
 
 export const contact = {
   name: "Scott Guthart",
-  title: "Senior Backend Engineer — Python, AI/LLMs, Data Systems",
+  title: "Software Engineer — Full-Stack, AI/LLMs, Data Science",
   location: "New York, New York, United States",
   phone: "516 474 6714",
   email: "scott@guth.art",

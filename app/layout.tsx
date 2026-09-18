@@ -8,7 +8,7 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
 
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-heading" })
 
-const siteTitle = "Scott Guthart — Senior Backend Engineer"
+const siteTitle = "Scott Guthart — Software Engineer"
 const siteDescription =
   "Backend-focused engineer with 7 years building data-heavy Python applications (FastAPI, Flask, pandas) and AI/LLM systems in New York, delivering solutions for Fortune 100 companies. Get in touch at scott@guth.art."
 
@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     "Scott Guthart",
-    "Senior Backend Engineer",
+    "Software Engineer",
+    "Backend Engineer",
     "Python",
     "FastAPI",
     "Flask",
