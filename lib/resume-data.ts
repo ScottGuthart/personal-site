@@ -15,9 +15,9 @@ export const experience: Experience[] = [
     period: "April 2025 – Present",
     location: "New York, NY",
     bullets: [
-      "Independently architect, build, and support production AI applications end to end as the sole engineer — Python/FastAPI REST services and a Supabase (PostgreSQL) backend behind a React, Next.js, Tailwind, and shadcn frontend, containerized with Docker and deployed on AWS EC2 — for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
-      "Built an automated media-monitoring pipeline in Python (FastAPI, pandas) that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses OpenAI and Anthropic (Claude) models with structured output to classify coverage and model topics, with human-in-the-loop review so strategists can validate and refine results.",
-      "Design multi-step LLM agent workflows with LangChain and LangGraph, and run large-scale data processing and analysis in Databricks to power client insights.",
+      "Independently architect, build, and support production AI applications end to end as the sole engineer — Python/FastAPI REST services and a Supabase (PostgreSQL) backend behind a React, Next.js, Tailwind, and shadcn frontend, containerized with Docker and deployed across Azure and AWS EC2 — for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
+      "Built an automated media-monitoring pipeline in Python (FastAPI, pandas) that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses Azure OpenAI, OpenAI, and Anthropic (Claude) models with structured output to classify coverage and model topics, with human-in-the-loop review so strategists can validate and refine results.",
+      "Design multi-step LLM agent workflows with LangChain and LangGraph on Azure OpenAI, and run large-scale data processing and analysis in Databricks to power client insights.",
       "Own deliverables from requirements through release: partner directly with strategists and client teams to gather feedback, communicate trade-offs, and iterate quickly, developing AI-natively with tools like Cursor and Claude to ship and refine features rapidly.",
     ],
   },
@@ -136,12 +136,12 @@ export const contact = {
   github: "github.com/ScottGuthart",
   scheduler: "calendar.app.google/P2didUYLNea2NPRG9",
   summary:
-    "Backend-focused software engineer with 7 years building data-heavy Python applications — Flask and pandas since 2019, FastAPI since 2025 — who works independently and owns deliverables end to end: architecting AI-powered systems with OpenAI, Anthropic, LangChain, and LangGraph, from Postgres data models and REST APIs to Docker, CI/CD, and production infrastructure, for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal.",
+    "Backend-focused software engineer with 7 years building data-heavy Python applications — Flask and pandas since 2019, FastAPI since 2025 — who works independently and owns deliverables end to end: architecting AI-powered systems with OpenAI, Anthropic, LangChain, and LangGraph, from Postgres data models and REST APIs to Docker, CI/CD, and production infrastructure on Azure and AWS, for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal.",
   skills: [
     "Python Backend (FastAPI, Flask, REST APIs, pandas, NumPy)",
     "SQL & Data (PostgreSQL / Supabase, MySQL, Databricks)",
-    "AI Applications (OpenAI, Anthropic APIs, LangChain, LangGraph)",
-    "Cloud, CI/CD & DevOps (AWS EC2, Docker, GitHub Actions, Linux)",
+    "AI Applications (Azure OpenAI, OpenAI, Anthropic APIs, LangChain, LangGraph)",
+    "Cloud, CI/CD & DevOps (Azure, AWS EC2, Docker, GitHub Actions, Linux)",
     "Full-Stack (Next.js, React, TypeScript)",
     "AI-Native Development (Cursor / Claude)",
   ],
