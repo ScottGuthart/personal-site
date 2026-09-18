@@ -15,8 +15,8 @@ export const experience: Experience[] = [
     period: "April 2025 – Present",
     location: "New York, NY",
     bullets: [
-      "Independently architect, build, and self-host full-stack AI applications end to end — React, Next.js, Tailwind, and shadcn on a Supabase (PostgreSQL) backend, deployed on AWS EC2 — for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
-      "Built an automated media-monitoring pipeline that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses LLMs with structured output to classify coverage and model topics, with human-in-the-loop review so strategists can validate and refine results.",
+      "Independently architect, build, and self-host full-stack AI applications end to end — Python/FastAPI services and a Supabase (PostgreSQL) backend behind a React, Next.js, Tailwind, and shadcn frontend, deployed on AWS EC2 — for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
+      "Built an automated media-monitoring pipeline in Python (FastAPI, pandas) that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses LLMs with structured output to classify coverage and model topics, with human-in-the-loop review so strategists can validate and refine results.",
       "Partner directly with internal teams to gather feedback and iterate quickly, developing AI-natively with tools like Cursor and Claude to ship and refine features rapidly.",
     ],
   },
@@ -28,8 +28,8 @@ export const experience: Experience[] = [
     location: "New York, NY",
     bullets: [
       "Founded and led the company's first software engineering team, hiring, mentoring, and establishing the engineering practices and architecture used to scale solutions across the organization.",
-      "Built a full-stack application (Python, React) integrating OpenAI's LLM to automate coding of thousands of open-ended survey responses, with analysts reviewing outputs in a human-in-the-loop workflow.",
-      "Shipped a statistical-toolkit app deployed on Linux via a REST API, improving a five-person analytics team's efficiency by 20%.",
+      "Built a full-stack application (Python/Flask, pandas, React) integrating OpenAI's LLM to automate coding of thousands of open-ended survey responses, with analysts reviewing outputs in a human-in-the-loop workflow.",
+      "Shipped a statistical-toolkit app — a Flask REST API processing large survey datasets with pandas, deployed on Linux — improving a five-person analytics team's efficiency by 20%.",
     ],
   },
   {
@@ -39,8 +39,8 @@ export const experience: Experience[] = [
     period: "November 2020 – July 2022",
     location: "New York, NY",
     bullets: [
-      "Built and deployed a market-simulation app — still in use by clients such as CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal — on a Linux cloud server.",
-      "Replaced an Excel-based system with a custom project-management app for 200+ projects, featuring Salesforce integration, automated reporting, and change tracking (MySQL backend).",
+      "Built and deployed a data-heavy market-simulation app (Python/Flask, pandas) — still in use by clients such as CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal — on a Linux cloud server.",
+      "Replaced an Excel-based system with a custom project-management app for 200+ projects, featuring Salesforce integration, automated reporting, and change tracking (Flask, MySQL backend).",
     ],
   },
   {
@@ -50,7 +50,7 @@ export const experience: Experience[] = [
     period: "June 2019 – November 2020",
     location: "Greater New York City Area",
     bullets: [
-      "Automated multivariate statistical techniques in Python (NumPy, scikit-learn), improving analyst efficiency by 15%.",
+      "Began building data-heavy Python applications, automating multivariate statistical techniques with pandas, NumPy, and scikit-learn and exposing them through internal Flask tools, improving analyst efficiency by 15%.",
     ],
   },
 ]
@@ -135,11 +135,12 @@ export const contact = {
   github: "github.com/ScottGuthart",
   scheduler: "calendar.app.google/P2didUYLNea2NPRG9",
   summary:
-    "Full-stack software engineer with a backend focus, independently architecting and self-hosting AI-driven applications end to end — from Postgres data models to production infrastructure — for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal.",
+    "Backend-focused software engineer with 7 years building data-heavy Python applications — Flask and pandas since 2019, FastAPI since 2025 — independently architecting and self-hosting AI-driven systems end to end, from Postgres data models and API services to production infrastructure, for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal.",
   skills: [
-    "Full-Stack (Next.js, React, Tailwind, shadcn)",
-    "Backend & Infra (Supabase / PostgreSQL, AWS EC2)",
+    "Python Backend (FastAPI, Flask, pandas, NumPy)",
+    "Data & Infra (PostgreSQL / Supabase, MySQL, AWS EC2, Linux)",
     "AI Workflows & Human-in-the-Loop Systems",
+    "Full-Stack (Next.js, React, TypeScript)",
     "AI-Native Development (Cursor / Claude)",
   ],
 }
