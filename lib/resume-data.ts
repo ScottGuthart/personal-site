@@ -16,8 +16,9 @@ export const experience: Experience[] = [
     location: "New York, NY",
     bullets: [
       "Independently architect, build, and support production AI applications end to end as the sole engineer — Python/FastAPI REST services and a Supabase (PostgreSQL) backend behind a React, Next.js, Tailwind, and shadcn frontend, containerized with Docker and deployed across Azure and AWS EC2 — for client teams serving Fortune 100 companies such as Samsung, Johnson & Johnson, and CVS.",
-      "Built an automated media-monitoring pipeline in Next.js and Python (pandas) that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses Azure OpenAI, OpenAI, and Anthropic (Claude) models with structured output to classify coverage and model topics, with human-in-the-loop review so strategists can validate and refine results.",
-      "Built a canvas-style AI press-release editor on a Python/FastAPI REST backend, letting communications teams draft, restructure, and refine releases collaboratively with LLM assistance.",
+      "Built an automated media-monitoring pipeline in Next.js and Python (pandas) that scrapes top-tier outlets like The New York Times and The Wall Street Journal and uses Azure OpenAI, OpenAI, and Anthropic (Claude) models with structured output to classify coverage and model topics. The React review UI renders thousands of articles in a virtualized TanStack Table with URL-synced filters and SWR caching, so strategists can validate and refine results in a human-in-the-loop workflow.",
+      "Built a canvas-style AI press-release editor — a real-time collaborative React interface with Zustand-managed document state, optimistic updates, and Zod-validated forms over a Python/FastAPI REST backend — letting communications teams draft, restructure, and refine releases with LLM assistance.",
+      "Maintain a shared component library on shadcn/ui and Tailwind with accessibility (keyboard navigation, ARIA) and performance (memoization, code splitting) baked in, so new client tools ship consistently and fast.",
       "Design multi-step LLM agent workflows with LangChain and LangGraph on Azure OpenAI, and run large-scale data processing and analysis in Databricks to power client insights.",
       "Own deliverables from requirements through release: partner directly with strategists and client teams to gather feedback, communicate trade-offs, and iterate quickly, developing AI-natively with tools like Cursor and Claude to ship and refine features rapidly.",
     ],
@@ -30,7 +31,7 @@ export const experience: Experience[] = [
     location: "New York, NY",
     bullets: [
       "Founded and led the company's first software engineering team, hiring, mentoring, and establishing the engineering practices — Git workflows, Docker-based environments, and CI/CD with GitHub Actions — and architecture used to scale solutions across the organization.",
-      "Built a full-stack application (Python/Flask, pandas, React) integrating OpenAI's LLM to automate coding of thousands of open-ended survey responses, with analysts reviewing outputs in a human-in-the-loop workflow.",
+      "Built a full-stack application (Python/Flask, pandas, React) integrating OpenAI's LLM to automate coding of thousands of open-ended survey responses; designed the React review interface with Context + reducer state, TanStack Query caching, and optimistic updates so analysts could accept, edit, or reject codes inline in a human-in-the-loop workflow.",
       "Shipped and supported a production statistical-toolkit app — a Flask REST API processing large survey datasets with pandas and SQL, deployed on Linux — improving a five-person analytics team's efficiency by 20%.",
     ],
   },
@@ -41,8 +42,8 @@ export const experience: Experience[] = [
     period: "November 2020 – July 2022",
     location: "New York, NY",
     bullets: [
-      "Built and deployed a data-heavy market-simulation app (Python/Flask, pandas) — still in use by clients such as CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal — on a Linux cloud server.",
-      "Replaced an Excel-based system with a custom project-management app for 200+ projects, featuring Salesforce integration, automated reporting, and change tracking (Flask, MySQL backend).",
+      "Built and deployed a data-heavy market-simulation app (React frontend, Python/Flask and pandas backend) — still in use by clients such as CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal — with interactive scenario controls whose state is managed through React Context and reducers.",
+      "Replaced an Excel-based system with a custom project-management app for 200+ projects, featuring complex validated forms, Salesforce integration, automated reporting, and change tracking (React, Flask, MySQL backend).",
     ],
   },
   {
@@ -115,9 +116,9 @@ export const featuredProject = {
   appUrl: "https://movietable.ai",
   sourceUrl: "https://github.com/ScottGuthart/movietable",
   description:
-    "Public full-stack movie discovery app combining critic and user ratings with AI-powered recommendations and weighted scoring.",
+    "Public full-stack movie discovery app combining critic and user ratings with AI-powered recommendations and weighted scoring. The React frontend virtualizes a large sortable, filterable dataset with TanStack Table and Virtual, syncs filters to the URL with nuqs, caches server state with SWR, and keeps user taste preferences in a Zustand store.",
   stack:
-    "Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, ReUI, TanStack Table, Supabase/PostgreSQL; Dockerized and self-hosted on a DigitalOcean Ubuntu VM with Coolify (PaaS) for git-push CI/CD and Cloudflare DNS",
+    "Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, ReUI, TanStack Table & Virtual, SWR, Zustand, nuqs, Supabase/PostgreSQL; Dockerized and self-hosted on a DigitalOcean Ubuntu VM with Coolify (PaaS) for git-push CI/CD and Cloudflare DNS",
 }
 
 export const publications: string[] = [
@@ -137,13 +138,15 @@ export const contact = {
   github: "github.com/ScottGuthart",
   scheduler: "calendar.app.google/P2didUYLNea2NPRG9",
   summary:
-    "Backend-focused software engineer with 7 years building data-heavy Python applications — Flask and pandas since 2019, FastAPI since 2025 — who works independently and owns deliverables end to end: architecting AI-powered systems with OpenAI, Anthropic, LangChain, and LangGraph, from Postgres data models and REST APIs to Docker, CI/CD, and production infrastructure on Azure and AWS, for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal.",
+    "Full-stack software engineer with 7 years building data-heavy applications end to end — React and Next.js frontends with advanced state management (Zustand, Context + reducers, SWR/TanStack Query, URL-synced state) over Python backends (Flask and pandas since 2019, FastAPI since 2025). Works independently and owns deliverables from UI to infrastructure: AI-powered systems with OpenAI, Anthropic, LangChain, and LangGraph on Postgres, Docker, and CI/CD across Azure and AWS, for Fortune 100 companies including CVS, Johnson & Johnson, Procter & Gamble, and L'Oréal.",
   skills: [
+    "React & Next.js (TypeScript, App Router, Server Components)",
+    "State Management (Zustand, Context + reducers, SWR / TanStack Query, nuqs)",
+    "UI Engineering (TanStack Table & Virtual, shadcn/ui, Tailwind, Zod forms, a11y)",
     "Python Backend (FastAPI, Flask, REST APIs, pandas, NumPy)",
     "SQL & Data (PostgreSQL / Supabase, MySQL, Databricks)",
     "AI Applications (Azure OpenAI, OpenAI, Anthropic APIs, LangChain, LangGraph)",
     "Cloud, CI/CD & DevOps (Azure, AWS EC2, Docker, GitHub Actions, Linux)",
-    "Full-Stack (Next.js, React, TypeScript)",
     "AI-Native Development (Cursor / Claude)",
   ],
 }
